@@ -1,7 +1,7 @@
-"""helpers class."""
+"""Helpers class."""
 
 class todo:
-    """Docstring."""
+    """Todo object."""
 
     id: int
     title: str

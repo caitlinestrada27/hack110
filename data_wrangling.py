@@ -29,6 +29,13 @@ def columnar(table: list[dict[str, str]]) -> dict[str, list[str]]:
         output[key] = column_vals(table, key)
     return output
 
+def mcu_universe(table: list[dict[str, str]]) -> dict[int, list[str]]:
+    output: dict[int, list[str]] = {}
+    for key in table:
+        output[int(table[key])] = key
+    return output 
+        
+
 filename: str = "data/mcu_timeline.csv"
 table: list[dict[str, str]] = read_csv_rows(filename)
 # print(filename)

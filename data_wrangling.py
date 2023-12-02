@@ -14,5 +14,5 @@ def read_csv_rows(filename: str) -> list[dict[str, str]]:
     file_handle.close()
     return output
 
-filename: str = "../../mcu_timeline.csv"
-print(read_csv_rows(filename))
+filename: str = "data/mcu_timeline.csv"
+print(read_csv_rows(filename)) 

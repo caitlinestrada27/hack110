@@ -2,6 +2,7 @@
 
 from csv import DictReader
 import math
+import os
 
 def read_csv_rows(filename: str) -> list[dict[str, str]]:
     """Read CSV file and return dict."""
@@ -13,5 +14,5 @@ def read_csv_rows(filename: str) -> list[dict[str, str]]:
     file_handle.close()
     return output
 
-filename: str = "../MCU_timeline.csv"
+filename: str = "../../mcu_timeline.csv"
 print(read_csv_rows(filename))

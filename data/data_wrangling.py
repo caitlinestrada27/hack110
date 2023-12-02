@@ -6,7 +6,7 @@ import math
 def read_csv_rows(filename: str) -> list[dict[str, str]]:
     """Read CSV file and return dict."""
     output: list[dict[str, str]] = []
-    file_handle = open(filename, "r", encoding = "utf8")
+    file_handle = open(filename, "r", encoding="utf8")
     csv_reader: DictReader = DictReader(file_handle)
     for row in csv_reader:
         output.append(row)

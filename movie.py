@@ -15,11 +15,18 @@ class Movie:
         self.mcu_year = mcu_point
         self.release_year = release
 
+    def __str__(self) -> str:
+        """Magic method for print()."""
+        return f"{self.title} ({self.release_year})"
+    
+
 filename: str = "data/mcu_timeline.csv"
 table: list[dict[str, str]] = read_csv_rows(filename)
 table = columnar(filename)
 
 # PHASE 1-3 MCU MOVIES
+all_movies: list[Movie] = []
+
 iron_man_1: Movie = Movie("Iron Man", 2010.1, 2008)
 hulk: Movie = Movie("The Incredible Hulk", 2005.1, 2008)
 iron_man_2: Movie = Movie("Iron Man 2", 2011.1, 2010)
@@ -43,3 +50,27 @@ ant_man_2: Movie = Movie("Ant-Man and the Wasp", 2018.1, 2018)
 captain_marvel: Movie = Movie("Captain Marvel", 1995.1, 2019)
 avengers_4: Movie = Movie("Avengers: Endgame", 2023.1, 2019)
 spider_man_2: Movie = Movie("Spider-Man: Far From Home", 2024.1, 2019)
+
+all_movies.append(iron_man_1)
+all_movies.append(hulk)
+all_movies.append(iron_man_2)
+all_movies.append(thor_1)
+all_movies.append(captain_america_1)
+all_movies.append(avengers_1)
+all_movies.append(iron_man_3)
+all_movies.append(thor_2)
+all_movies.append(captain_america_2)
+all_movies.append(guardians_of_the_galaxy)
+all_movies.append(avengers_2)
+all_movies.append(ant_man_1)
+all_movies.append(captain_america_3)
+all_movies.append(doctor_strange)
+all_movies.append(guardians_of_the_galaxy_2)
+all_movies.append(spider_man_1)
+all_movies.append(thor_3)
+all_movies.append(black_panther)
+all_movies.append(avengers_3)
+all_movies.append(ant_man_2)
+all_movies.append(captain_marvel)
+all_movies.append(avengers_4)
+all_movies.append(spider_man_2)
